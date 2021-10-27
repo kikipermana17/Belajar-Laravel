@@ -13,42 +13,73 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-// Route::get('hal2', function () {
-//     return "<h1>Selamat Datang Dihalaman Kedua</h1>";
+// Route::get('/', function () {
+//     return view('welcome');
 // });
 
-Route::get('biodata', function () {
-    $nama = "Kiki Permana";
-    $jk = "Laki-Laki";
-    $tempatLahir = "Bandung";
-    $tanggalLahir = "17 September 2004";
-    $alamat = "kp.Bojong Cijerah";
-    $agama = "Islam";
-    $hobi = "Main Game";
+// // Route::get('hal2', function () {
+// //     return "<h1>Selamat Datang Dihalaman Kedua</h1>";
+// // });
 
-    return "<h1>Biodata</h1><br>
-            Nama            : " . $nama . "<br>
-            Jenis Kelamin   : " . $jk . "<br>
-            Tempat Lahir    : " . $tempatLahir . "<br>
-            Tanggal Lahir   : " . $tanggalLahir . "<br>
-            Alamat          : " . $alamat . "<br>
-            Agama           : " . $agama . "<br>
-            Hobi            : " . $hobi . "<br>";
-});
+// Route::get('biodata', function () {
+//     $nama = "Kiki Permana";
+//     $jk = "Laki-Laki";
+//     $tempatLahir = "Bandung";
+//     $tanggalLahir = "17 September";
+//     $alamat = "kp.Bojong Cijerah";
+//     $agama = "Islam";
+//     $hobi = "Main Game";
 
-Route::get('biodata2', function () {
+//     return "<h1>Biodata</h1><br>
+//             Nama            : " . $nama . "<br>
+//             Jenis Kelamin   : " . $jk . "<br>
+//             Tempat Lahir    : " . $tempatLahir . "<br>
+//             Tanggal Lahir   : " . $tanggalLahir . "<br>
+//             Alamat          : " . $alamat . "<br>
+//             Agama           : " . $agama . "<br>
+//             Hobi            : " . $hobi . "<br>";
+// });
 
-    $nama = "Kiw Permana";
-    $jk = "Laki-Laki";
-    $tempatLahir = "Bandung";
-    $tanggalLahir = "17 September 2004";
-    $alamat = "kp.Bojong Cijerah";
-    $agama = "Islam";
-    $hobi = "Main Game";
+// Route::get('biodata2', function () {
 
-    return view('biodata', compact('nama', 'jk', 'tempatLahir', 'tanggalLahir', 'alamat', 'agama', 'hobi'));
+//     $nama = "Kiw Permana";
+//     $jk = "Laki-Laki";
+//     $tempatLahir = "Bandung";
+//     $tanggalLahir = "17 September";
+//     $alamat = "kp.Bojong Cijerah";
+//     $agama = "Islam";
+//     $hobi = "Main Game";
+
+//     return view('biodata', compact('nama', 'jk', 'tempatLahir', 'tanggalLahir', 'alamat', 'agama', 'hobi'));
+// });
+
+// Route::get('/input/{nama}/{jeniskelamin}/{tempatLahir}/{tanggalLahir}/{alamat}/{agama}/{hobi}',
+//     function ($nama, $jk, $tempatLahir, $tanggalLahir, $alamat, $agama, $hobi) {
+//         echo " Nama         : " . $nama . "<br>
+//             Jenis Kelamin   : " . $jk . "<br>
+//             Tempat Lahir    : " . $tempatLahir . "<br>
+//             Tanggal Lahir   : " . $tanggalLahir . "<br>
+//             Alamat          : " . $alamat . "<br>
+//             Agama           : " . $agama . "<br>
+//             Hobi            : " . $hobi . "<br>";
+//     });
+
+// Route::get('blog', function () {
+//     $data = [
+//         ['id' => 1, 'title' => 'Lorem Ipsum', 'content' => 'Content Pertama'],
+//         ['id' => 2, 'title' => 'Lorem Ipsum', 'content' => 'Content Kedua'],
+//         ['id' => 3, 'title' => 'Lorem Ipsum', 'content' => 'Content Ketiga'],
+//     ];
+//     // dd($data);
+//     return view('blog', compact('data'));
+// });
+
+Route::get('absen', function () {
+    $data = [
+        ['nis' => 1, 'nama' => 'Lorem Ipsum', 'jenisKelamin' => 'Content Pertama', 'alamat' => 'cibaduyut'],
+        ['id' => 2, 'title' => 'Lorem Ipsum', 'content' => 'Content Kedua'],
+        ['id' => 3, 'title' => 'Lorem Ipsum', 'content' => 'Content Ketiga'],
+    ];
+    // dd($data);
+    return view('blog', compact('data'));
 });
