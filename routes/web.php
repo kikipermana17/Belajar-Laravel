@@ -76,10 +76,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('absen', function () {
     $data = [
-        ['nis' => 1, 'nama' => 'Lorem Ipsum', 'jenisKelamin' => 'Content Pertama', 'alamat' => 'cibaduyut'],
-        ['id' => 2, 'title' => 'Lorem Ipsum', 'content' => 'Content Kedua'],
-        ['id' => 3, 'title' => 'Lorem Ipsum', 'content' => 'Content Ketiga'],
+        ['nis' => 1, 'nama' => 'Alya', 'jenisKelamin' => 'Perempuan', 'Kelas' => 'XII RPL 3', 'alamat' => 'Nata ENdah'],
+        ['nis' => 2, 'nama' => 'Anggi', 'jenisKelamin' => 'Perempuan', 'Kelas' => 'XII RPL 3', 'alamat' => 'Bojong Cilebak'],
+        ['nis' => 3, 'nama' => 'Anisa', 'jenisKelamin' => 'Perempuan', 'Kelas' => 'XII RPL 3', 'alamat' => 'Bojong Tanjung'],
+        ['nis' => 4, 'nama' => 'Arif', 'jenisKelamin' => 'Laki Laki', 'Kelas' => 'XII RPL 3', 'alamat' => 'Cibedug Girang'],
+        ['nis' => 5, 'nama' => 'Astri', 'jenisKelamin' => 'Perempuan', 'Kelas' => 'XII RPL 3', 'alamat' => 'PAsawahan'],
+        ['nis' => 6, 'nama' => 'Azhar', 'jenisKelamin' => 'Laki Laki', 'Kelas' => 'XII RPL 3', 'alamat' => 'Sekeawi'],
+        ['nis' => 7, 'nama' => 'Aziz', 'jenisKelamin' => 'Laki Laki', 'Kelas' => 'XII RPL 3', 'alamat' => 'Sekeawi'],
+        ['nis' => 8, 'nama' => 'Bima', 'jenisKelamin' => 'Laki Laki', 'Kelas' => 'XII RPL 3', 'alamat' => 'Nusa'],
+        ['nis' => 9, 'nama' => 'Cindy', 'jenisKelamin' => 'Perempuan', 'Kelas' => 'XII RPL 3', 'alamat' => 'Rancamanyar'],
+        ['nis' => 10, 'nama' => 'Dinda', 'jenisKelamin' => 'Perempuan', 'Kelas' => 'XII RPL 3', 'alamat' => 'Bojong Malaka'],
     ];
     // dd($data);
-    return view('blog', compact('data'));
+    return view('absen', compact('data'));
 });
