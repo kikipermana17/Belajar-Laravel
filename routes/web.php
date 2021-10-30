@@ -139,17 +139,22 @@ use Illuminate\Support\Facades\Route;
 //     }
 // });
 
-Route::get('/pesan/{makanan?}/{minuman?}/{cemilan?}', function ($makanan = null, $minuman = null, $cemilan = null) {
+// Route::get('/pesan/{makanan?}/{minuman?}/{cemilan?}', function ($makanan = null, $minuman = null, $cemilan = null) {
 
-    if ($makanan = $makanan) {
-        echo "<b>Anda Memesan <br> Makan : </b>" . $makanan . "<br>";
-        if ($minuman = $minuman) {
-            echo "<b>Minum : </b>" . $minuman . "<br>";
-        }if ($cemilan = $cemilan) {
-            echo "<b>Cemilan :</b> " . $cemilan . "<br>";
+//     if ($makanan = $makanan) {
+//         echo "<b>Anda Memesan <br> Makan : </b>" . $makanan . "<br>";
+//         if ($minuman = $minuman) {
+//             echo "<b>Minum : </b>" . $minuman . "<br>";
+//         }if ($cemilan = $cemilan) {
+//             echo "<b>Cemilan :</b> " . $cemilan . "<br>";
 
-        }
-    } else {
-        echo "<b>Anda Tidak Memesan Silahkan Pulang</b>";
-    }
+//         }
+//     } else {
+//         echo "<b>Anda Tidak Memesan Silahkan Pulang</b>";
+//     }
+// });
+
+Route::get('/testmodel', function () {
+    $query = App\Models\Post::all();
+    return $query;
 });
