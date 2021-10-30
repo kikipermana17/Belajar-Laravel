@@ -74,19 +74,82 @@ use Illuminate\Support\Facades\Route;
 //     return view('blog', compact('data'));
 // });
 
-Route::get('absen', function () {
-    $data = [
-        ['nis' => 1, 'nama' => 'Alya', 'jenisKelamin' => 'Perempuan', 'Kelas' => 'XII RPL 3', 'alamat' => 'Nata ENdah'],
-        ['nis' => 2, 'nama' => 'Anggi', 'jenisKelamin' => 'Perempuan', 'Kelas' => 'XII RPL 3', 'alamat' => 'Bojong Cilebak'],
-        ['nis' => 3, 'nama' => 'Anisa', 'jenisKelamin' => 'Perempuan', 'Kelas' => 'XII RPL 3', 'alamat' => 'Bojong Tanjung'],
-        ['nis' => 4, 'nama' => 'Arif', 'jenisKelamin' => 'Laki Laki', 'Kelas' => 'XII RPL 3', 'alamat' => 'Cibedug Girang'],
-        ['nis' => 5, 'nama' => 'Astri', 'jenisKelamin' => 'Perempuan', 'Kelas' => 'XII RPL 3', 'alamat' => 'PAsawahan'],
-        ['nis' => 6, 'nama' => 'Azhar', 'jenisKelamin' => 'Laki Laki', 'Kelas' => 'XII RPL 3', 'alamat' => 'Sekeawi'],
-        ['nis' => 7, 'nama' => 'Aziz', 'jenisKelamin' => 'Laki Laki', 'Kelas' => 'XII RPL 3', 'alamat' => 'Sekeawi'],
-        ['nis' => 8, 'nama' => 'Bima', 'jenisKelamin' => 'Laki Laki', 'Kelas' => 'XII RPL 3', 'alamat' => 'Nusa'],
-        ['nis' => 9, 'nama' => 'Cindy', 'jenisKelamin' => 'Perempuan', 'Kelas' => 'XII RPL 3', 'alamat' => 'Rancamanyar'],
-        ['nis' => 10, 'nama' => 'Dinda', 'jenisKelamin' => 'Perempuan', 'Kelas' => 'XII RPL 3', 'alamat' => 'Bojong Malaka'],
-    ];
-    // dd($data);
-    return view('absen', compact('data'));
+// Route::get('absen', function () {
+//     $data = [
+//         ['nis' => 1, 'nama' => 'Alya', 'jenisKelamin' => 'Perempuan', 'Kelas' => 'XII RPL 3', 'alamat' => 'Nata ENdah'],
+//         ['nis' => 2, 'nama' => 'Anggi', 'jenisKelamin' => 'Perempuan', 'Kelas' => 'XII RPL 3', 'alamat' => 'Bojong Cilebak'],
+//         ['nis' => 3, 'nama' => 'Anisa', 'jenisKelamin' => 'Perempuan', 'Kelas' => 'XII RPL 3', 'alamat' => 'Bojong Tanjung'],
+//         ['nis' => 4, 'nama' => 'Arif', 'jenisKelamin' => 'Laki Laki', 'Kelas' => 'XII RPL 3', 'alamat' => 'Cibedug Girang'],
+//         ['nis' => 5, 'nama' => 'Astri', 'jenisKelamin' => 'Perempuan', 'Kelas' => 'XII RPL 3', 'alamat' => 'PAsawahan'],
+//         ['nis' => 6, 'nama' => 'Azhar', 'jenisKelamin' => 'Laki Laki', 'Kelas' => 'XII RPL 3', 'alamat' => 'Sekeawi'],
+//         ['nis' => 7, 'nama' => 'Aziz', 'jenisKelamin' => 'Laki Laki', 'Kelas' => 'XII RPL 3', 'alamat' => 'Sekeawi'],
+//         ['nis' => 8, 'nama' => 'Bima', 'jenisKelamin' => 'Laki Laki', 'Kelas' => 'XII RPL 3', 'alamat' => 'Nusa'],
+//         ['nis' => 9, 'nama' => 'Cindy', 'jenisKelamin' => 'Perempuan', 'Kelas' => 'XII RPL 3', 'alamat' => 'Rancamanyar'],
+//         ['nis' => 10, 'nama' => 'Dinda', 'jenisKelamin' => 'Perempuan', 'Kelas' => 'XII RPL 3', 'alamat' => 'Bojong Malaka'],
+//     ];
+//     // dd($data);
+//     return view('absen', compact('data'));
+// });
+
+// Route::get('siswa', function () {
+//     $data = [
+//         ['id' => 1,
+//             'nama' => 'Kiki Permana',
+//             'username' => 'Kiki',
+//             'email' => 'kikiper@gmail.com',
+//             'alamat' => 'Bandung',
+//             'mapel' => [
+//                 'mapel1' => 'Bahasa Indonesia',
+//                 'mapel2' => 'Bahasa Inggris',
+//                 'mapel3' => 'Bahasa Jepang',
+//                 'mapel4' => 'Bahasa Belanda',
+//             ],
+//         ],
+//     ];
+//     // dd($data);
+//     return view('siswa', compact('data'));
+// });
+
+// Route::get('/input/{nama?}/{kelas?}', function ($nama = null, $kelas = null) {
+//     echo "Nama Saya : " . $nama;
+//     echo "<br>";
+//     echo "Kelas : " . $kelas;
+
+// });
+
+// Route::get('/nilai/{nama?}/{mtk?}/{pro?}/{indo?}/{ingris?}', function ($nama = null, $mtk = 0, $pro = 0, $indo = 0, $ingris = 0) {
+//     echo "Nama Saya:" . $nama . "<br>";
+//     echo "Nilai Maatematika : " . $mtk . "<br>";
+//     echo "Nilai Produktif : " . $pro . "<br>";
+//     echo "Nilai Bahasa Indonesia :  " . $indo . "<br>";
+//     echo "Nilai Bahsa Inggris : " . $ingris . "<br>";
+
+//     $ratarata = ($mtk + $pro + $indo + $ingris) / 4;
+
+//     echo "Rata-rata :" . $ratarata . "<br>";
+//     echo "Grade : ";
+//     if ($ratarata >= 90) {
+//         echo "A";
+//     } elseif ($ratarata >= 80) {
+//         echo "B";
+//     } elseif ($ratarata >= 70) {
+//         echo "C";
+//     } else {
+//         echo "D";
+//     }
+// });
+
+Route::get('/pesan/{makanan?}/{minuman?}/{cemilan?}', function ($makanan = null, $minuman = null, $cemilan = null) {
+
+    if ($makanan = $makanan) {
+        echo "<b>Anda Memesan <br> Makan : </b>" . $makanan . "<br>";
+        if ($minuman = $minuman) {
+            echo "<b>Minum : </b>" . $minuman . "<br>";
+        }if ($cemilan = $cemilan) {
+            echo "<b>Cemilan :</b> " . $cemilan . "<br>";
+
+        }
+    } else {
+        echo "<b>Anda Tidak Memesan Silahkan Pulang</b>";
+    }
 });

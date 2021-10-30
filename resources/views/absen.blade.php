@@ -8,19 +8,29 @@
     <center>
         <h2>Menampilkan Data</h2>
     </center>
-    <ul>
+    <center>
+    <table border=1>
+        <tr>
+            <th>Nis</th>
+            <th>Nama</th>
+            <th>Jenis Kelamin</th>
+            <th>Kelas</th>
+            <th>Alamat</th>
+        </tr>
         @foreach($data as $data2)
-        Nis : {{ $data2['nis']}} <br>
-        Nama : {{ $data2['nama']}} <br>
-        Jenis Kelamin : {{ $data2['jenisKelamin']}} <br>
-        Kelas : {{ $data2['Kelas']}} <br>
-        Alamat : {{ $data2['alamat']}} <br>
 
 
-        <hr>
+        <tr>
+            <td>{{ $data2['nis']}}</td>
+            <td>{{ $data2['nama']}}</td>
+            <td>{{ $data2['jenisKelamin']}}</td>
+            <td>{{ $data2['Kelas']}}</td>
+            <td>{{ $data2['alamat']}}</td>
+        </tr>
 
         @endforeach
-    </ul>
+    </table>
+    </center>
 </body>
 </html>
 
